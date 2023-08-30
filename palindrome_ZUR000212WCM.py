@@ -1,6 +1,6 @@
 class CascadingPalindrome:
     def __init__(self, sequence):
-        if not sequence or sequence == " ":
+        if not sequence or sequence == " ": # validate sequence is not empty
             raise ValueError("Sequence cannot be empty")
         
         self.sequence = sequence
@@ -25,6 +25,7 @@ class CascadingPalindrome:
         palindromes = []
 
         for item in words:
+            # item must contain only numbers and letters
             if not isinstance(item, str) or not item.isalnum():
                 raise ValueError("Invalid sequence. Words can only contain letters, numbers")
     
@@ -63,6 +64,7 @@ if __name__ == "__main__":
                     "=-----BEGIN CERTIFICATE-----",
                     ""
     ]   
+    # change any int type to string
     input_sequence = [str(item) for item in input_sequence]
     for input_str in input_sequence:
         try:
