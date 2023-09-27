@@ -1,0 +1,7 @@
+.env
+z_venv
+templates
+db.sqlite3
+__pycache__
+.vscode
+
